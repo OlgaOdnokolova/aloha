@@ -40,8 +40,7 @@ module.exports = function(grunt) {
       },
       style: {
         files: {
-          "build/css/style.min.css": ["build/css/style.css"],
-          "build/css/normalize.min.css": ["build/css/normalize.css"]
+          "build/css/style.min.css": ["build/css/style.css"]
         }
       }
     },
@@ -72,9 +71,9 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "img/**",
-            "fonts/**",
             "index.html",
-            "corporate.html"
+            "catalog.html",
+            "item.html"
           ],
           dest: "build"
         }]
@@ -135,8 +134,8 @@ module.exports = function(grunt) {
     "sass",
     "cmq",
     "postcss",
-    "cssmin",
-    "imagemin"
+    "cssmin"
+    //"imagemin"
   ]);
 
   grunt.registerTask("default", ["browserSync", "watch"]);
